@@ -39,7 +39,7 @@ class VentanaPrincipal:
         frame_principal.pack(expand=True, fill='both', padx=20, pady=20)
         
         # Campo de entrada (invisible pero funcional)
-        self.entrada = ttk.Entry(frame_principal, width=1)
+        self.entrada = ttk.Entry(frame_principal, width=30, font=("Arial", 16))
         self.entrada.pack()
         self.entrada.bind("<Return>", self.procesar_codigo)
         
@@ -50,7 +50,7 @@ class VentanaPrincipal:
             font=("Helvetica", 48, "bold"),
             justify="center"
         )
-        self.resultado_label.pack(expand=True, fill='both', pady=20)
+        self.resultado_label.pack(expand=True, fill='none', pady=20)
         
         # Frame para botones (abajo)
         self.frame_botones = ttk.Frame(frame_principal)
