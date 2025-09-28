@@ -10,7 +10,7 @@ class FormularioProducto:
 
         self.ventana = tk.Toplevel(parent)
         self.ventana.title(titulo)
-        self.ventana.geometry("400x220")
+        self.ventana.geometry("500x300")
         self.ventana.resizable(False, False)
         self.ventana.grab_set()
         self.ventana.focus_set()
@@ -19,19 +19,19 @@ class FormularioProducto:
         estilo.theme_use('clam')
 
         # Código (solo lectura)
-        ttk.Label(self.ventana, text="Código:", font=("Arial", 10)).pack(pady=(10, 0))
-        ttk.Label(self.ventana, text=codigo, font=("Arial", 11, "bold")).pack()
+        ttk.Label(self.ventana, text="Código:", font=("Arial", 16)).pack(pady=(10, 0))
+        ttk.Label(self.ventana, text=codigo, font=("Arial", 17, "bold")).pack()
 
         # Nombre
-        ttk.Label(self.ventana, text="Nombre:", font=("Arial", 10)).pack(pady=(12, 0))
-        self.entry_nombre = ttk.Entry(self.ventana, width=40, font=("Arial", 12))
+        ttk.Label(self.ventana, text="Nombre:", font=("Arial", 16)).pack(pady=(12, 0))
+        self.entry_nombre = ttk.Entry(self.ventana, width=40, font=("Arial", 16))
         self.entry_nombre.insert(0, nombre_inicial)
         self.entry_nombre.pack()
         self.entry_nombre.focus()
 
         # Precio
-        ttk.Label(self.ventana, text="Precio:", font=("Arial", 10)).pack(pady=(10, 0))
-        self.entry_precio = ttk.Entry(self.ventana, width=40, font=("Arial", 12))
+        ttk.Label(self.ventana, text="Precio:", font=("Arial", 16)).pack(pady=(10, 0))
+        self.entry_precio = ttk.Entry(self.ventana, width=40, font=("Arial", 16))
         self.entry_precio.insert(0, str(precio_inicial) if precio_inicial else "")
         self.entry_precio.pack()
 
