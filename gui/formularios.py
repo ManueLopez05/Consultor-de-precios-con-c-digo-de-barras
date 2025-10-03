@@ -55,8 +55,8 @@ class FormularioProducto:
         ).pack(side=tk.LEFT, padx=10)
 
         # Permitir usar la tecla Espacio para guardar
-        self.ventana.bind("<space>", lambda e: self._guardar())
-        self.boton_guardar.focus()  # Opcional: enfocar botón para que Space funcione
+        # self.ventana.bind("<space>", lambda e: self._guardar())
+        # self.boton_guardar.focus()  # Opcional: enfocar botón para que Space funcione
 
     def _guardar(self):
         nombre = self.entry_nombre.get().strip()
